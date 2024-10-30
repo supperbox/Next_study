@@ -24,9 +24,11 @@ export default function Page() {
 
   return (
     <div>
-      <Link href="/home">首页</Link>
-      <Link href="/person">个人</Link>
-      <ChangeLan />
+      <div className="h-[50px] flex gap-[20px] ml-[20px] items-center">
+        <Link href="/home">首页</Link>
+        <Link href="/person">个人</Link>
+        {/* <ChangeLan /> */}
+      </div>
     </div>
   );
 }

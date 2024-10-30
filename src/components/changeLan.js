@@ -1,9 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 export default function ChangeLan() {
   const router = useRouter();
   const changeLan = (lang) => {
-    router.push(router.pathname, router.asPath, { locale: lang });
+    router.push(router.pathname, { locale: lang });
   };
   return (
     <>

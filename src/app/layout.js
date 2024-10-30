@@ -1,5 +1,7 @@
 "use client";
 
+import "./global.css"; // 导入全局样式文件 同时构建tailwind.css
+
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import store from "@/store/store";
 import { Provider } from "react-redux";
