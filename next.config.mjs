@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin(); // 相当于是国际化插件nextI
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  logging: {
+    fetches: {
+      fullUrl: true, // 这个日志会帮助我们查看缓存情况
+    },
+  },
   webpack(config, { isServer }) {
     // 添加 unplugin-auto-import 插件
     config.plugins.push(
@@ -22,8 +27,16 @@ const nextConfig = {
         ],
       })
     );
-
     return config;
+  },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "cdn2.thecatapi.com",
+      },
+    ],
   },
 };
 
